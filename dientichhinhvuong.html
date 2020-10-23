@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Diện tích hình vuông</title>
+    </head>
+    <body>
+        Nhập cạnh a: <input type="number" id="canh">
+        <button onclick="chuyen()">Tính</button>
+        <span id="hienthi"></span>
+        <script>
+            function chuyen() {
+            let canh = Number(document.getElementById("canh").value)
+            let dientich = canh * canh
+            let hienthi = "Diện tích hình vuông là: " + dientich
+            document.getElementById("hienthi").innerText = hienthi
+            }
+        </script>
+    </body>
+</html>
