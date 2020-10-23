@@ -11,15 +11,15 @@
     <table>
         <tr>
             <td> Hệ số a: </td>
-            <td><input type="number" id="a"></td>
+            <td><input type="number" id="hesoa"></td>
         </tr>
         <tr>
             <td> Hệ số b: </td>
-            <td><input type="number" id="b"></td>
+            <td><input type="number" id="hesob"></td>
         </tr>
         <tr>
             <td> Hệ số c: </td>
-            <td><input type="number" id="c"></td>
+            <td><input type="number" id="hesoc"></td>
         </tr>
         <tr>
             <td colspan="3"><button onclick="giai()">Giải phương trình</button></td>
@@ -27,14 +27,15 @@
     </table>
     <span id="hienthi"></span>
     <script>
-        let a = Number(document.getElementById("a").value)
-        let b = Number(document.getElementById("b").value)
-        let c = Number(document.getElementById("c").value)
-        let delta = b^2 - 4 * a * c
         function giai() {
+            let a = Number(document.getElementById("hesoa").value)
+            let b = Number(document.getElementById("hesob").value)
+            let c = Number(document.getElementById("hesoc").value)
+            let delta = b * b - (4 * a * c)
+            console.log(delta)
             if (delta == 0) {
                 let nghiemkep = ((-1) * b) / (a * 2)
-                document.getElementById("hienthi").innerText = "Phương trình có 1 nghiệm kép x1=x2= " + nghiemkep
+                document.getElementById("hienthi").innerText = "Phương trình có 1 nghiệm kép x1 = x2 = " + nghiemkep
             }
             else if (delta >0) {
                 let x1 = (-b + Math.sqrt(delta))/(2*a)
