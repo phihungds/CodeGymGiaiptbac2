@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Chuyển độ C sang độ F</title>
+    </head>
+    <body>
+        Nhập độ C: <input type="number" id="doC">
+        <button onclick="chuyen()">Chuyển</button>
+        <span id="hienthi"></span>
+        <script>
+            function chuyen() {
+            let doC = Number(document.getElementById("doC").value)
+            let doF = doC * 9/5 + 32
+            let hienthi = doC + " độ C = " + doF + " độ F"
+            document.getElementById("hienthi").innerText = hienthi
+            }
+        </script>
+    </body>
+</html>
