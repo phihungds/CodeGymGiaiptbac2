@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Giải phương trình bậc 2</title>
+</head>
+
+<body>
+    <p>Một phương trình bậc 2 là phương trình có dạng : </p> <img
+        src="https://wikimedia.org/api/rest_v1/media/math/render/svg/23e70cfa003f402d108ec04d97983fb62f69536e">
+    <p>Hãy nhập các giá trị hệ số a, b, c tương ứng:</p>
+    <table>
+        <tr>
+            <td> Hệ số a: </td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+            <td> Hệ số b: </td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td> Hệ số c: </td>
+            <td><input type="number" id="c"></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button onclick="giai()">Giải phương trình</button></td>
+        </tr>
+    </table>
+    <span id="hienthi"></span>
+    <script>
+        let a = Number(document.getElementById("a").value)
+        let b = Number(document.getElementById("b").value)
+        let c = Number(document.getElementById("c").value)
+        let delta = b*b - 4 * a * c
+        function giai() {
+            if (delta == 0) {
+                let nghiemkep = ((-1) * b) / (2 * a)
+                document.getElementById("hienthi").innerText = "Phương trình có 1 nghiệm kép x1=x2= " + nghiemkep
+            }
+            else if (delta >0) {
+                let x1 = (-b + Math.sqrt(delta))/(2*a)
+                let x2 = (-b - Math.sqrt(delta))/(2*a)
+                document.getElementById("hienthi").innerText = "Phương trình có 2 nghiệm phân biệt x1= " + x1 + " và x2= " + x2
+            }    
+        
+        
+        }
+    </script>
+</body>
+
+</html>
