@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Chuyển từ mét sang feet</title>
+    </head>
+    <body>
+        Nhập số mét: <input type="number" id="metter">
+        <button onclick="chuyen()">Chuyển</button>
+        <span id="hienthi"></span>
+        <script>
+            function chuyen() {
+            let metter = Number(document.getElementById("metter").value)
+            let feet = metter * 3.2808
+            let hienthi = metter + " mét = " + feet + " feet"
+            document.getElementById("hienthi").innerText = hienthi
+            }
+        </script>
+    </body>
+</html>
